@@ -1,0 +1,64 @@
+button {
+  align-items: center;
+  display: block;
+  margin: 350px auto;
+  background-color: #06f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-box.active {
+  display: flex;
+}
+
+#modal-contents {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#modal-contents button {
+  background-color: #fff;
+  color: #ccc;
+  font-size: 20px;
+  position: absolute;
+  outline: none;
+  border: none;
+  top: -310px;
+  right: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+#profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#desc {
+  margin: 20px 20px;
+}
+p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
