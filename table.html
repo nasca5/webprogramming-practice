@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>무선 충전 테이블</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+
+    <script>
+      const canvas = document.getElementById('myCanvas');
+      const ctx = canvas.getContext('2d');
+
+      // 테이블 그리기
+      ctx.fillStyle = '#CCCCCC'; // 회색
+      ctx.fillRect(50, 120, 300, 60); // 가운데에 직사각형 그리기
+
+      // 테이블 상단 면 그리기
+      ctx.fillStyle = '#BBBBBB'; // 연한 회색
+      ctx.beginPath();
+      ctx.moveTo(50, 120); // 시작점
+      ctx.lineTo(350, 120); // 선 그리기
+      ctx.lineTo(300, 180); // 선 그리기
+      ctx.lineTo(50, 180); // 선 그리기
+      ctx.closePath();
+      ctx.fill(); // 면 그리기
+
+      // 충전 영역 표시
+      ctx.strokeStyle = '#FF0000'; // 빨간색
+      ctx.lineWidth = 2; // 선 두께 설정
+      ctx.strokeRect(100, 140, 200, 20); // 충전 영역으로 작은 직사각형 테두리 그리기
+
+      // 충전 기호 그리기
+      ctx.beginPath();
+      ctx.moveTo(160, 140); // 시작점
+      ctx.lineTo(190, 130); // 선 그리기
+      ctx.lineTo(220, 140); // 선 그리기
+      ctx.lineTo(190, 150); // 선 그리기
+      ctx.closePath();
+      ctx.fill(); // 도형 내부 채우기
+
+      // 텍스트 작성
+      ctx.font = '20px Arial';
+      ctx.fillStyle = '#000000'; // 검은색
+      ctx.fillText('무선 충전 테이블', 130, 90);
+    </script>
+  </body>
+</html>
+
+
